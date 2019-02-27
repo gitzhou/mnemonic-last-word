@@ -2,6 +2,8 @@
 
 A tiny Windows desktop tool that calculate the last word of BIP39 Mnemonic.
 
+[中文版解释](https://aaron67.cc/2019/02/18/bitcoin-wallet-best-practice/#%E5%AE%89%E5%85%A8%E7%9A%84%E7%94%9F%E6%88%90%E5%8A%A9%E8%AE%B0%E8%AF%8D)
+
 ## Why did this
 
 Tool https://iancoleman.io/bip39/ is good and easy enough to generate mnemonic words directly or from the raw entropy.
