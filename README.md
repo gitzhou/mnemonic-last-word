@@ -16,6 +16,8 @@ However, Mnemonic contains checksum so they can't move forward and I made this.
 
 **Build the project by yourself (recommended) or only download file from `builds` directory in this repository.**
 
+**Run it offline when you actually use to avoid information leak.**
+
 According to BIP39, the last word consist of two parts: some low bits of raw entropy and some high bits of checksum.
 
 We can figure out the checksum length from the mnemonic word count then decide the length of last word prefix since each word has 11 bits.
@@ -28,15 +30,16 @@ Word Count | Checksum Length | Prefix Length
 21     |        7        |        4
 24     |        8        |        3
 
-![Imgur](https://i.imgur.com/K8WvYb2l.png)
+![Imgur](https://i.imgur.com/e9wIAzFl.png)
 
-If I wanna 12 words
+If I wanna 24 words
 
-- Get the first 11 words with some random and offline methods that you trusted, fill in the words into [1]
-- Fill in 7 random binary bits (according to the table) into [2]
-- Click `Calculate` button
+1. Select the language, currently support English and Chinese Simplified
+2. Get the first 23 words with some random and offline methods that you trusted, fill in the words
+3. According to the table, fill in 3 random binary bits as last word prefix
+4. Click `Calculate` button
 
-![Imgur](https://i.imgur.com/6R64pXcl.png)
+![Imgur](https://i.imgur.com/aLiSkp9l.png)
 
 Use this tool at your own rish, reivew code or do some test before actually use it.
 

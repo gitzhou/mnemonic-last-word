@@ -80,6 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="wordlist\chinese_simplified.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="wordlist\english.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

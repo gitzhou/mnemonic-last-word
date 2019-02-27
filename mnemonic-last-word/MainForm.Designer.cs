@@ -39,13 +39,15 @@
             this.LastPrefixLabel = new System.Windows.Forms.Label();
             this.ChecksumTextBox = new System.Windows.Forms.TextBox();
             this.ChecksumLabel = new System.Windows.Forms.Label();
+            this.LanguageLabel = new System.Windows.Forms.Label();
+            this.LanguageComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // MnemonicLabel
             // 
             this.MnemonicLabel.AutoSize = true;
             this.MnemonicLabel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MnemonicLabel.Location = new System.Drawing.Point(25, 24);
+            this.MnemonicLabel.Location = new System.Drawing.Point(25, 82);
             this.MnemonicLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.MnemonicLabel.Name = "MnemonicLabel";
             this.MnemonicLabel.Size = new System.Drawing.Size(306, 36);
@@ -56,7 +58,7 @@
             // 
             this.MnemonicTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MnemonicTextBox.Location = new System.Drawing.Point(340, 24);
+            this.MnemonicTextBox.Location = new System.Drawing.Point(340, 82);
             this.MnemonicTextBox.Multiline = true;
             this.MnemonicTextBox.Name = "MnemonicTextBox";
             this.MnemonicTextBox.Size = new System.Drawing.Size(492, 187);
@@ -66,7 +68,7 @@
             // 
             this.LastWordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LastWordTextBox.Location = new System.Drawing.Point(340, 367);
+            this.LastWordTextBox.Location = new System.Drawing.Point(340, 425);
             this.LastWordTextBox.Name = "LastWordTextBox";
             this.LastWordTextBox.ReadOnly = true;
             this.LastWordTextBox.Size = new System.Drawing.Size(492, 35);
@@ -76,7 +78,7 @@
             // 
             this.LastWordLabel.AutoSize = true;
             this.LastWordLabel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LastWordLabel.Location = new System.Drawing.Point(187, 367);
+            this.LastWordLabel.Location = new System.Drawing.Point(187, 425);
             this.LastWordLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LastWordLabel.Name = "LastWordLabel";
             this.LastWordLabel.Size = new System.Drawing.Size(144, 36);
@@ -86,7 +88,7 @@
             // CalculateButton
             // 
             this.CalculateButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.CalculateButton.Location = new System.Drawing.Point(269, 461);
+            this.CalculateButton.Location = new System.Drawing.Point(263, 527);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(150, 50);
             this.CalculateButton.TabIndex = 3;
@@ -98,7 +100,7 @@
             // 
             this.HintLabel.AutoSize = true;
             this.HintLabel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.HintLabel.Location = new System.Drawing.Point(37, 67);
+            this.HintLabel.Location = new System.Drawing.Point(37, 125);
             this.HintLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.HintLabel.Name = "HintLabel";
             this.HintLabel.Size = new System.Drawing.Size(294, 36);
@@ -108,7 +110,7 @@
             // ClearButton
             // 
             this.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ClearButton.Location = new System.Drawing.Point(437, 461);
+            this.ClearButton.Location = new System.Drawing.Point(431, 527);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(150, 50);
             this.ClearButton.TabIndex = 4;
@@ -120,7 +122,7 @@
             // 
             this.LastPrefixTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LastPrefixTextBox.Location = new System.Drawing.Point(340, 239);
+            this.LastPrefixTextBox.Location = new System.Drawing.Point(340, 297);
             this.LastPrefixTextBox.Name = "LastPrefixTextBox";
             this.LastPrefixTextBox.Size = new System.Drawing.Size(492, 35);
             this.LastPrefixTextBox.TabIndex = 2;
@@ -130,7 +132,7 @@
             // 
             this.LastPrefixLabel.AutoSize = true;
             this.LastPrefixLabel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LastPrefixLabel.Location = new System.Drawing.Point(12, 239);
+            this.LastPrefixLabel.Location = new System.Drawing.Point(12, 297);
             this.LastPrefixLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LastPrefixLabel.Name = "LastPrefixLabel";
             this.LastPrefixLabel.Size = new System.Drawing.Size(319, 36);
@@ -141,7 +143,7 @@
             // 
             this.ChecksumTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ChecksumTextBox.Location = new System.Drawing.Point(340, 303);
+            this.ChecksumTextBox.Location = new System.Drawing.Point(340, 361);
             this.ChecksumTextBox.Name = "ChecksumTextBox";
             this.ChecksumTextBox.ReadOnly = true;
             this.ChecksumTextBox.Size = new System.Drawing.Size(492, 35);
@@ -151,18 +153,44 @@
             // 
             this.ChecksumLabel.AutoSize = true;
             this.ChecksumLabel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChecksumLabel.Location = new System.Drawing.Point(179, 303);
+            this.ChecksumLabel.Location = new System.Drawing.Point(179, 361);
             this.ChecksumLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ChecksumLabel.Name = "ChecksumLabel";
             this.ChecksumLabel.Size = new System.Drawing.Size(152, 36);
             this.ChecksumLabel.TabIndex = 15;
             this.ChecksumLabel.Text = "Checksum";
             // 
+            // LanguageLabel
+            // 
+            this.LanguageLabel.AutoSize = true;
+            this.LanguageLabel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LanguageLabel.Location = new System.Drawing.Point(186, 18);
+            this.LanguageLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.LanguageLabel.Name = "LanguageLabel";
+            this.LanguageLabel.Size = new System.Drawing.Size(145, 36);
+            this.LanguageLabel.TabIndex = 16;
+            this.LanguageLabel.Text = "Language";
+            // 
+            // LanguageComboBox
+            // 
+            this.LanguageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LanguageComboBox.FormattingEnabled = true;
+            this.LanguageComboBox.Items.AddRange(new object[] {
+            "English",
+            "简体中文"});
+            this.LanguageComboBox.Location = new System.Drawing.Point(340, 22);
+            this.LanguageComboBox.Name = "LanguageComboBox";
+            this.LanguageComboBox.Size = new System.Drawing.Size(492, 32);
+            this.LanguageComboBox.TabIndex = 17;
+            this.LanguageComboBox.Tag = "0";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 529);
+            this.ClientSize = new System.Drawing.Size(844, 589);
+            this.Controls.Add(this.LanguageComboBox);
+            this.Controls.Add(this.LanguageLabel);
             this.Controls.Add(this.ChecksumTextBox);
             this.Controls.Add(this.ChecksumLabel);
             this.Controls.Add(this.LastPrefixTextBox);
@@ -174,7 +202,7 @@
             this.Controls.Add(this.LastWordLabel);
             this.Controls.Add(this.MnemonicTextBox);
             this.Controls.Add(this.MnemonicLabel);
-            this.MinimumSize = new System.Drawing.Size(870, 600);
+            this.MinimumSize = new System.Drawing.Size(870, 660);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mnemonic Last Word";
@@ -197,6 +225,8 @@
         private System.Windows.Forms.Label LastPrefixLabel;
         private System.Windows.Forms.TextBox ChecksumTextBox;
         private System.Windows.Forms.Label ChecksumLabel;
+        private System.Windows.Forms.Label LanguageLabel;
+        private System.Windows.Forms.ComboBox LanguageComboBox;
     }
 }
 

@@ -13,7 +13,10 @@ namespace mnemonic_last_word
         private static readonly int[] VALID_MNEMONIC_WORD_COUNT = { 12, 15, 18, 21, 24 };
         private static readonly int BIT_LENGTH_PER_WORD = 11;
 
-        private List<string> english = new List<string>();
+        // BIP39 word list
+        // 0 - English
+        // 1 - Chinese Simplified
+        private Dictionary<int, List<string>> wordListMap = new Dictionary<int, List<string>>();
 
         public MainForm()
         {
@@ -22,22 +25,25 @@ namespace mnemonic_last_word
 
         private void MainForm_Load(object sender, System.EventArgs e)
         {
-            LoadMnemonic();
+            LoadMnemonic("english", 0);
+            LoadMnemonic("chinese_simplified", 1);
+            LanguageComboBox.SelectedIndex = 0; // Default select English
         }
 
-        public void LoadMnemonic()
+        public void LoadMnemonic(string filename, int index)
         {
-            using (StreamReader sr = new StreamReader(@"wordlist\english.txt"))
+            wordListMap[index] = new List<string>();
+            using (StreamReader sr = new StreamReader(@"wordlist\" + filename + ".txt", Encoding.UTF8))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    english.Add(line);
+                    wordListMap[index].Add(line);
                 }
             }
-            if (english.Count != TOTAL_WORD_COUNT_IN_LIST)
+            if (wordListMap[index].Count != TOTAL_WORD_COUNT_IN_LIST)
             {
-                MessageBox.Show("Mnemonic word list file is broken, please reset the file", "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mnemonic word list file " + filename + ".txt is broken, please reset the file", "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
@@ -47,7 +53,7 @@ namespace mnemonic_last_word
             try
             {
                 // Choose a language
-                List<string> wordList = english;
+                List<string> wordList = wordListMap[LanguageComboBox.SelectedIndex];
 
                 // Validation of word list
                 string[] words = MnemonicTextBox.Text.Trim().Split(' ');
